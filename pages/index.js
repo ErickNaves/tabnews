@@ -1,5 +1,11 @@
+import styles from "../styles/styles.module.css";
+
 function Home() {
-  return <h1>Duo?</h1>;
+  return (
+  <div className={styles.container}>
+    <h1 className={styles.title}>Voleizin hj?</h1>
+  </div>
+);
 }
 
 export default Home;
