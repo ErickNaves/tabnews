@@ -8,7 +8,10 @@
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "project": "docker compose -f infra/compose.yaml up -d && next dev",
+    "stop:project": "docker compose -f infra/compose.yaml down"
+
   },
   "author": "",
   "license": "MIT",
