@@ -4,6 +4,9 @@ import styles from "../styles/styles.module.css";
 function getNextVolleyDay() {
   const today = new Date();
   const dayOfWeek = today.getDay();
+  if (dayOfWeek === 3 || dayOfWeek === 5) {
+    return today;
+  }
   const daysUntilWednesday = (3 - dayOfWeek + 7) % 7 || 7;
   const daysUntilFriday = (5 - dayOfWeek + 7) % 7 || 7;
   const nextWednesday = new Date(today);
