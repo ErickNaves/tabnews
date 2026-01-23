@@ -15,7 +15,7 @@ export default async function migrations(request, response) {
     const pendingMigrations = await migrationRunner({
       ...defaultMigrationOptions,
     });
-    return response.status(200).json([pendingMigrations]);
+    return response.status(200).json(pendingMigrations);
   }
 
   if (request.method === "POST") {
@@ -24,9 +24,9 @@ export default async function migrations(request, response) {
       dryRun:false,
     });
     if (migratedMigrations.length > 0) {
-      return response.status(201).json([migratedMigrations]);
+      return response.status(201).json(migratedMigrations);
     }
-    return response.status(200).json([migratedMigrations]);
+    return response.status(200).json(migratedMigrations);
   }
 
   return response.status(405).end();

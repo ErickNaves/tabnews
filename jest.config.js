@@ -1,4 +1,3 @@
-process.env.NODE_ENV = 'development';
 const dotenv = require("dotenv");
 dotenv.config({
   path: ".env.development",
