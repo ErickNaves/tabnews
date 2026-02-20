@@ -39,8 +39,10 @@ function Home() {
     "https://www.cnn.com/",
     "https://www.theguardian.com/international",
     "https://www.rottentomatoes.com/",
+    "https://www.youtube.com/watch?v=HJsaUUFqbdk",
+    "https://www.instagram.com/reel/DLOCaT4y8AB/",
   ];
-  const NAO_LINK = "https://www.youtube.com/watch?v=HJsaUUFqbdk";
+  const NAO_LINK = "https://www.youtube.com/watch?v=Mfwaw4O8afQ";
 
   function openInNewTab(url) {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
