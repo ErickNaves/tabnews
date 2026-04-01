@@ -1,15 +1,351 @@
-.container {
-  padding: 40px;
-  font-family: Arial, sans-serif;
-  text-align: center;
+/* Windows 2000 Design System */
+
+/* ── Desktop ── */
+.desktop {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #008080;
+  background-image: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Tahoma", "MS Sans Serif", Arial, sans-serif;
+  font-size: 11px;
+  overflow: hidden;
 }
 
-.title {
-  font-size: 40px;
+/* ── Taskbar ── */
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: #d4d0c8;
+  border-top: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  gap: 2px;
+  z-index: 1000;
+  box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.startButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  padding: 0 6px 0 4px;
+  background: #d4d0c8;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  cursor: pointer;
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  outline: none;
+}
+
+.startButton:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+.startIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.taskbarClock {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 6px;
+  background: #d4d0c8;
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
   color: #000000;
 }
 
-.description {
-  margin-top: 10px;
-  font-size: 20px;
+.taskbarTask {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  padding: 0 8px;
+  background: #d4d0c8;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  cursor: default;
+}
+
+/* ── Window ── */
+.window {
+  width: 400px;
+  background: #d4d0c8;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  box-shadow: 2px 2px 0 #000000;
+  position: relative;
+  z-index: 100;
+  margin-bottom: 30px;
+}
+
+/* ── Title Bar ── */
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 3px 3px 4px;
+  background: linear-gradient(to right, #0a246a, #a6caf0);
+  height: 22px;
+  cursor: default;
+  user-select: none;
+}
+
+.titleBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.titleBarIcon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleBarText {
+  color: #ffffff;
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.titleBarButtons {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.titleBarBtn {
+  width: 16px;
+  height: 14px;
+  background: #d4d0c8;
+  border: 1px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 9px;
+  font-family: "Marlett", "Tahoma", Arial, sans-serif;
+  color: #000000;
+  padding: 0;
+  outline: none;
+}
+
+.titleBarBtn:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* ── Window Content ── */
+.windowContent {
+  padding: 12px;
+}
+
+/* ── Message Box area ── */
+.msgBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.msgIcon {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.msgIconImage {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.msgText {
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.msgTextBold {
+  font-weight: bold;
+}
+
+/* ── Divider ── */
+.divider {
+  height: 2px;
+  background: linear-gradient(to right, #808080, #d4d0c8);
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #ffffff;
+  margin: 8px 0;
+}
+
+/* ── Groupbox ── */
+.groupBox {
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  padding: 10px 10px 10px 10px;
+  margin: 4px 0;
+  position: relative;
+}
+
+.groupBoxLegend {
+  position: absolute;
+  top: -7px;
+  left: 8px;
+  background: #d4d0c8;
+  padding: 0 4px;
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+}
+
+/* ── Radio Buttons ── */
+.radioGroup {
+  display: flex;
+  gap: 20px;
+  padding: 6px 0;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radioLabel input[type="radio"] {
+  margin: 0;
+  cursor: pointer;
+  accent-color: #000080;
+}
+
+/* ── Buttons ── */
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.btn {
+  height: 23px;
+  min-width: 75px;
+  padding: 0 12px;
+  background: #d4d0c8;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 0 #000000;
+}
+
+.btn:active:not(:disabled) {
+  border-color: #808080 #ffffff #ffffff #808080;
+  box-shadow: none;
+  padding-top: 1px;
+  padding-left: 13px;
+}
+
+.btn:disabled {
+  color: #808080;
+  text-shadow: 1px 1px 0 #ffffff;
+  cursor: default;
+}
+
+.btnFocused {
+  outline: 1px dotted #000000;
+  outline-offset: -4px;
+}
+
+/* ── Status bar ── */
+.statusBar {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  border-top: 1px solid #808080;
+  padding: 0 4px;
+  gap: 4px;
+}
+
+.statusBarPanel {
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
+  color: #000000;
+  padding: 2px 4px;
+  border: 1px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  flex: 1;
+}
+
+/* ── Desktop Icons ── */
+.desktopIcons {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.desktopIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  width: 64px;
+}
+
+.desktopIconImg {
+  width: 32px;
+  height: 32px;
+}
+
+.desktopIconLabel {
+  font-family: "Tahoma", Arial, sans-serif;
+  font-size: 11px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000000;
+  word-break: break-word;
+  max-width: 64px;
+}
+
+.desktopIcon:hover .desktopIconLabel {
+  background: #0a246a;
+  color: #ffffff;
 }
